@@ -1,23 +1,20 @@
 import java.util.ArrayList;
 
-public class TicketsShop {
+public class TicketShop {
 
-	ArrayList<TicketsMain> ticketList = new ArrayList <TicketsMain>();
-	
-	public static void main(String[] args) {
+	static ArrayList<TicketsMain> ticketList = new ArrayList <TicketsMain>();
 
-	}
 	
-	public void bestellen(TicketsMain t)
+	public static void bestellen(TicketsMain t)
 	{
 		ticketList.add(t);
 	}
-	public int getAnzahlTickets()
+	public static int getAnzahlTickets()
 	{
 		return ticketList.size();
 	}
 	
-	public double getGuenstigstesTicket()
+	public static double getGuenstigstesTicket()
 	{
 		double günstigstes = 1000.0;
 		for(int i=0;i<ticketList.size();i++)
@@ -30,7 +27,7 @@ public class TicketsShop {
 		return günstigstes;
 	}
 	
-	public double getTeuerstesTicket()
+	public static double getTeuerstesTicket()
 	{
 		double teuerstes = 0.0;
 		for(int i=0;i<ticketList.size();i++)
